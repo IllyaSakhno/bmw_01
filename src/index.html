@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMW Catalog</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
- 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="js/main.js"></script>
+
 </head>
 <body>
-    <span class="loader"></span>
+
+
     <header>
         <div class="header-container">
             <a href="#" class="logo">
@@ -19,115 +21,123 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Models</a></li>
-                    <li><a href="#">BMW History</a></li>
                     <li><a href="#">Our contact</a></li>
+                    
                 </ul>
             </nav>
         </div>
     </header>
-    
+
     <main>
-        <section class="hero">
-            <img src="img/image 7 (1).png" alt="BMW M3 CS TOURING">
-            <h1>The New M3 CS Touring</h1>
-            <a href="#" class="button">Experience more</a>
+        <section class="video-hero">
+            <!-- Відео фон -->
+            <div class="hero-video-container">
+                <video autoplay muted loop playsinline class="hero-video">
+                    <source src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/www_bmw-m_com/all-models/m-automobile/m3-cs-touring/DF24_000240979_1_rec.mp4" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+
+            <!-- Контент поверх відео -->
+            <div class="hero-content">
+                <h1 class="hero-title">THE NEW BMW M3 CS TOURING</h1>
+                <p class="hero-subtitle">Uncompromising performance meets everyday practicality</p>
+                <a href="#" class="button">Discover More</a>
+            </div>
         </section>
-        
+
         <section class="news">
-            <article>
+            <article data-aos="fade-up">
                 <img src="img/bmw-m3-gtr-nfs-hd-01 1.png" alt="BMW M3 GTR">
                 <h2>A GAMING ICON BECOMES REALITY</h2>
                 <p>The BMW M3 GTR from Need for Speed</p>
             </article>
-            <article>
+            <article data-aos="fade-up">
                 <img src="img/image 8 (1).png" alt="BMW M Edition">
                 <h2>PAST AND PRESENT FEAT. TECHNO VIOLET</h2>
                 <p>BMW M Edition by Ronnie Fieg and BMW M x Kith Concept</p>
             </article>
         </section>
-        
+
         <section class="model-catalog">
             <h2>BMW M MODELS CATALOG</h2>
-            
-            <div class="model-section">
+            <div class="model-section" data-aos="fade-up">
                 <h3 class="model-title">M8</h3>
                 <div class="model-grid">
-                    <div class="car-card">
-                        <img src="img/8-gran-coupe 1.png" alt="BMW M8 Blue" class="car-image">
-                    </div>
-                    <div class="car-card">
-                        <img src="img/8-series-cabrio 1.png" alt="BMW M8 Gold" class="car-image">
-                    </div>
-                    <div class="car-card">
-                        <img src="img/8-series-coup-new 1.png" alt="BMW M8 White" class="car-image">
-                    </div>
+                    <div class="car-card"><img src="img/8-gran-coupe 1.png" alt="BMW M8 Blue" class="car-image"></div>
+                    <div class="car-card"><img src="img/8-series-cabrio 1.png" alt="BMW M8 Gold" class="car-image"></div>
+                    <div class="car-card"><img src="img/8-series-coup-new 1.png" alt="BMW M8 White" class="car-image"></div>
+                </div>
                     
-                    </div>
-                </div>
-            
-            
-            <div class="model-section">
-                <h3 class="model-title">M5</h3>
-                <div class="model-grid">
-                    <div class="car-card">
-                        <img src="img/7xbmw-m5-sedan 1.png" alt="BMW M5 Gray" class="car-image">
-                    </div>
-                    <div class="car-card">
-                        <img src="img/bmw-m5-touring 1.png" alt="BMW M5 Green" class="car-image">
-                    </div>
-                    <div class="car-card">
-                        <img src="img/JF03-7MA 1 (2).png" alt="BMW M5 Red" class="car-image">
-                    </div>
-                </div>
             </div>
-            
-            <div class="model-section">
-                <h3 class="model-title">M4</h3>
-                <div class="model-grid">
-                    <div class="car-card">
-                        <img src="img/bmw-4-gran-coupe-2020-main 1.png" alt="BMW M4 White" class="car-image">
-                    </div>
-                    <div class="car-card">
-                        <img src="img/bmw-4-gran-coupe-2020-main 1.png" alt="BMW M4 Blue" class="car-image">
-                    </div>
-                    <div class="car-card">
-                        <img src="img/4-cabri 1.png" alt="BMW M4 Pink" class="car-image">
-                    </div>
-                </div>
+        </div>
+    
+    
+    <div class="model-section"data-aos="fade-up">
+        <h3 class="model-title">M5</h3>
+        <div class="model-grid">
+            <div class="car-card" onmouseenter="playVideo(this)" onmouseleave="pauseVideo(this)">
+                <img src="img/7xbmw-m5-sedan 1.png" alt="BMW M5 Gray" class="car-image">
+                <video class="hover-video" muted loop preload="none">
+                  <source src="img/Snapins.ai_video_AQM6G8JTK2Zmkp77sxuE2q6DFF3iW1DwvCF-xS79q4dsXrO1OcZkOloArp69y9yezdS-EpwO6xeZzeMNuY4X0lvaS-QD2BQHqPKjH0M.mp4" type="video/mp4">
+                </video>
+              </div>
+            <div class="car-card">
+                <img src="img/bmw-m5-touring 1.png" alt="BMW M5 Green" class="car-image">
             </div>
-            
-            <div class="model-section">
-                <h3 class="model-title">M3</h3>
-                <div class="model-grid">
-                    <div class="car-card">
-                        <img src="img/3-seriya-m 1.png" alt="BMW M3 Green" class="car-image">
-                    </div>
-                    <div class="car-card">
-                        <img src="img/bmw-m3-2023-main 1.png" alt="BMW M3 Blue" class="car-image">
-                    </div>
-                    <div class="car-card">
-                        <img src="img/default_1294_Screenshot_190.40b4afa9_1-removebg-preview.png" alt="BMW M3 Dark Green" class="car-image">
-                    </div>
+            <div class="car-card">
+                <img src="img/JF03-7MA 1 (2).png" alt="BMW M5 Red" class="car-image">
+            </div>
+        </div>
+    </div>
+    
+    <div class="model-section"data-aos="fade-up">
+        <h3 class="model-title">M4</h3>
+        <div class="model-grid">
+            <div class="car-card">
+                <img src="img/bmw-4-gran-coupe-2020-main 1.png" alt="BMW M4 White" class="car-image">
+            </div>
+            <div class="car-card">
+                <img src="img/bmw-4-gran-coupe-2020-main 1.png" alt="BMW M4 Blue" class="car-image">
+            </div>
+            <div class="car-card">
+                <img src="img/4-cabri 1.png" alt="BMW M4 Pink" class="car-image">
+            </div>
+        </div>
+    </div>
+    <div class="model-section">
+        <h3 class="model-title">M3</h3>
+        <div class="model-grid">
+            <div class="car-card">
+                <img src="img/3-seriya-m 1.png" alt="BMW M3 Green" class="car-image">
+            </div>
+            <div class="car-card">
+                <img src="img/bmw-m3-2023-main 1.png" alt="BMW M3 Blue" class="car-image">
+            </div>
+            <div class="car-card">
+                <img src="img/default_1294_Screenshot_190.40b4afa9_1-removebg-preview.png" alt="BMW M3 Dark Green" class="car-image">
+            </div>
+        </div>
+    </div>
+
                 </div>
             </div>
         </section>
-        
-        
+
         <section class="news">
-            <article>
+            <article data-aos="fade-up">
                 <img src="img/image 9 (1).png" alt="BMW M Hybrid V8">
                 <h2>THE ART OF SPEED</h2>
                 <p>BMW M Hybrid V8: The 20th art car by Julie Mehretu</p>
             </article>
-            <article>
+            <article data-aos="fade-up">
                 <img src="img/image 10 (1).png" alt="BMW racing mission">
                 <h2>HARD TO OVERTAKE</h2>
                 <p>An epic transportation mission with racing driver Charlie Martin</p>
             </article>
         </section>
     </main>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="BMW Logo" class="loader">
-    
+
     <footer>
         <div class="footer-logo">BMW</div>
         <nav>
@@ -140,14 +150,18 @@
             </ul>
         </nav>
         <div class="social-icons">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
-            <a href="#">YouTube</a>
+            <a href="https://www.facebook.com/BMW.M?locale=uk_UA">Facebook</a>
+            <a href="https://www.instagram.com/bmwm?igsh=MTM2OXA5cTJtOW01MQ">Instagram</a>
+            <a href="https://x.com/BMWMotorsport?t=P8vP-ikQzJFMH8CFXzSQ8A&s=09">Twitter</a>
+            <a href="">YouTube</a>
         </div>
         <p>&copy; 2025 BMW M. All Rights Reserved.</p>
     </footer>
-    
- 
+
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

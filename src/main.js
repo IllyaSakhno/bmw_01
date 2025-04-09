@@ -1,23 +1,12 @@
-        // Slider functionality
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const slider = document.querySelector('.slider');
-        const totalSlides = slides.length;
-        
-        document.querySelector('.next').addEventListener('click', function() {
-            moveSlide(1);
-        });
-        
-        document.querySelector('.prev').addEventListener('click', function() {
-            moveSlide(-1);
-        });
-        
-        function moveSlide(direction) {
-            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-        }
-        
-        // Auto-slide
-        setInterval(() => {
-            moveSlide(1);
-        }, 5000);
+function playVideo(element) {
+    const video = element.querySelector('.hover-video');
+    video.style.opacity = 1;
+    video.play().catch(e => console.log("Автовідтворення заблоковано:", e));
+  }
+  
+  function pauseVideo(element) {
+    const video = element.querySelector('.hover-video');
+    video.style.opacity = 0;
+    video.pause();
+    video.currentTime = 0; // Перемотка на початок
+  }
